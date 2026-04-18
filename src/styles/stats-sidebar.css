@@ -1,0 +1,144 @@
+.stats-sidebar {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:nth-child(2) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.stat-card:nth-child(3) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.stat-label {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.stat-value-small {
+    font-size: 18px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.update-time {
+    padding: 10px;
+    background: #f0f7ff;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #0066cc;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.chart-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.chart-container h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.chart-container canvas {
+    max-height: 200px;
+}
+
+.stats-info {
+    margin-top: auto;
+    padding: 12px;
+    background: #f0f7ff;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #0066cc;
+    line-height: 1.5;
+    border-left: 3px solid #51bbd6;
+}
+
+.stats-info p {
+    margin: 0;
+}
+
+/* Scrollbar styling for stats sidebar */
+.stats-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stats-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.stats-sidebar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.stats-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+@media (max-width: 768px) {
+    .stats-sidebar {
+        padding: 15px;
+    }
+
+    .stats-sidebar h2 {
+        font-size: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+
+    .chart-container {
+        margin: 15px 0;
+    }
+}
